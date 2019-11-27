@@ -182,7 +182,7 @@ function applyToTag(style, options, obj) {
   }
 
   if (sourceMap && btoa) {
-    css += `\n/*# sourceMappingURL=data:application/json;base64,${btoa(
+    css = `${css}/*# sourceMappingURL=data:application/json;base64,${btoa(
       unescape(encodeURIComponent(JSON.stringify(sourceMap)))
     )} */`;
   }
